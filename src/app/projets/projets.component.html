@@ -1,0 +1,29 @@
+<div class="project-list">
+  <div *ngFor="let project of projects" class="project-card">
+    <img [src]="project.badge" alt="{{ project.title }}" />
+    <h3>{{ project.title }}</h3>
+    <button (click)="showVideo(project)">Voir la vidéo</button>
+  </div>
+</div>
+
+<div *ngIf="selectedProject" class="video-container">
+  <button (click)="closeVideo()">Fermer</button>
+
+  <iframe
+    *ngIf="selectedProject.type === 'video'"
+    [src]="sanitizeUrl(selectedProject.videoId, selectedProject.type)"
+    width="100%"
+    height="400"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+
+  <video
+    *ngIf="selectedProject.type === 'local'"
+    [src]="sanitizeUrl(undefined, selectedProject.type, selectedProject.localVideo)"
+    width="100%"
+    height="400"
+    controls
+    autoplay>
+  </video>
+</div>

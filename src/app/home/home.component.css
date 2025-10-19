@@ -1,0 +1,198 @@
+/* =================== GLOBAL =================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f9fafb;
+  color: #333;
+}
+
+/* =================== HERO SECTION =================== */
+.hero {
+  background: linear-gradient(to bottom right, #4a90e2, #50e3c2);
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+  border-radius: 0 0 30px 30px;
+  margin-bottom: 3rem;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.hero .btn-primary {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  background-color: #ff6f61;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.hero .btn-primary:hover {
+  background-color: #d95b4f;
+  transform: scale(1.05);
+}
+
+/* =================== EXAMPLES SECTION =================== */
+.examples {
+  text-align: center;
+  padding: 3rem 1.5rem 6rem; /* ✅ Ajout d’un padding bas pour éviter que le footer colle */
+  background-color: #fff;
+}
+
+.examples h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* =================== CARDS =================== */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 320px;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* =================== IMAGE =================== */
+.logo-placeholder {
+  background-color: #4a90e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+}
+
+.logo-placeholder img {
+  max-width: 90%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* =================== CARD CONTENT =================== */
+.card-content {
+  padding: 1.2rem;
+  text-align: left;
+}
+
+.card-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  color: #111;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* =================== FOOTER COMPATIBILITY =================== */
+/* ✅ Empêche le footer de coller à la section */
+.examples::after {
+  content: "";
+  display: block;
+  height: 50px; /* espace de respiration avant le footer */
+}
+
+/* =================== MEDIA QUERIES =================== */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3.5rem 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .hero .btn-primary {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .examples {
+    padding: 2.5rem 1rem 4rem;
+  }
+
+  .examples h2 {
+    font-size: 1.4rem;
+  }
+
+  .card-content h3 {
+    font-size: 1rem;
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2.5rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.85rem;
+  }
+
+  .examples {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    max-width: 95%;
+  }
+}

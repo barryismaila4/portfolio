@@ -1,0 +1,135 @@
+/* ======== CONTAINER PRINCIPAL ======== */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+  background: linear-gradient(135deg, #0d1117, #1f2937);
+  min-height: 100vh;
+}
+
+/* ======== CARTE PROJET ======== */
+.project-card {
+  background: #111827;
+  border-radius: 16px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 255, 153, 0.3);
+}
+
+/* ======== BADGE (IMAGE) ======== */
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* ======== TITRE ======== */
+.project-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #10b981;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* ======== BOUTON ======== */
+.project-card button {
+  background: linear-gradient(90deg, #10b981, #3b82f6);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.project-card button:hover {
+  background: linear-gradient(90deg, #3b82f6, #10b981);
+  transform: scale(1.05);
+}
+
+/* ======== VIDEO CONTAINER ======== */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 23, 42, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.4s ease;
+}
+
+/* ======== BOUTON FERMER ======== */
+.video-container button {
+  background: #ef4444;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.video-container button:hover {
+  background: #dc2626;
+}
+
+/* ======== IFRAME & VIDEO ======== */
+.video-container iframe,
+.video-container video {
+  border-radius: 12px;
+  max-width: 90%;
+  max-height: 70vh;
+  box-shadow: 0 8px 24px rgba(0, 255, 153, 0.2);
+}
+
+/* ======== ANIMATION D'APPARITION ======== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 600px) {
+  .project-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-card button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .video-container iframe,
+  .video-container video {
+    max-width: 95%;
+    max-height: 60vh;
+  }
+}

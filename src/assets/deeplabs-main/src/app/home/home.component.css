@@ -1,0 +1,103 @@
+/* home.component.css */
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(to bottom right, #4a90e2, #50e3c2);
+    color: white;
+    text-align: center;
+    padding: 1rem 1rem; /* Réduit le padding */
+    border-radius: 8px;
+    margin-bottom: 1.5rem; /* Réduit la marge */
+  }
+  
+  .hero h1 {
+    font-size: 1rem; /* Réduit la taille du titre */
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+  
+  .hero p {
+    font-size: 0.8rem; /* Réduit la taille du texte */
+    margin-bottom: 1rem;
+  }
+  
+  .hero .btn-primary {
+    padding: 0.4rem 0.8rem; /* Réduit le padding du bouton */
+    background-color: #ff6f61;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .hero .btn-primary:hover {
+    background-color: #d95b4f;
+  }
+  
+  /* Examples Section */
+  .examples {
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  .examples h2 {
+    font-size: 1.5rem; /* Réduit la taille du sous-titre */
+    margin-bottom: 2rem; /* Réduit la marge */
+  }
+  
+  .cards-container {
+    display: flex;
+    gap: 1rem; /* Réduit l'écart entre les cartes */
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 8px; /* Réduit le rayon du bord */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Réduit l'ombre */
+    width: 220px; /* Réduit la largeur */
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Réduit le mouvement au survol */
+  }
+  
+  .logo-placeholder {
+    background-color: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 1rem; /* Réduit le padding */
+  }
+  
+  .logo-placeholder img {
+    max-width: 80%; /* Réduit la taille de l'image */
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .card-content {
+    padding: 1rem; /* Réduit le padding */
+  }
+  
+  .card-content h3 {
+    font-size: 1.2rem; /* Réduit la taille du titre */
+    margin-bottom: 0.5rem; /* Réduit la marge */
+  }
+  
+  .card-content p {
+    font-size: 0.9rem; /* Réduit la taille du texte */
+    color: #666;
+  }
+  
