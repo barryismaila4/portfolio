@@ -1,26 +1,89 @@
-/* header.component.css */
 header {
-    background-color: #333;
-    padding: 1rem;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Navigation */
+nav {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 15px;
+}
+
+nav li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a.active {
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
-  
-  nav ul {
+
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  nav.open {
     display: flex;
-    list-style: none;
-    justify-content: center;
   }
-  
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
   nav li {
-    margin: 0 15px;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #444;
   }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
+
+  nav li a {
+    width: 100%;
+    display: block;
   }
-  
-  nav a.active {
-    font-weight: bold;
-  }
-  
+}
