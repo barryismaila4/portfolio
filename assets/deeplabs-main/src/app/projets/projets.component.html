@@ -1,0 +1,40 @@
+<section class="projects">
+  <h2>📂 Mes Projets</h2>
+
+  <div class="circle-container">
+    <div class="circle">
+      <img src="assets/img/logoproj.png" alt="Logo Projets" class="project-logo">
+      <h3>Projets Réalisés</h3>
+      <div class="links">
+        <a href="https://malielectronicslaboratory.online" target="_blank">Malielectronics</a>
+        <a href="https://github.com/barryismaila4/E-Commerce-Springboot-Angular" target="_blank">Big E-commerce</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="projects-container">
+    <div class="project-card" *ngFor="let project of projects">
+      <div class="project-content">
+        <img [src]="project.badge" alt="{{ project.title }}" class="badge" />
+        <h3>{{ project.title }}</h3>
+        <ng-container *ngIf="project.type === 'video'">
+          <button (click)="showVideo(project.videoId)" *ngIf="!selectedVideo || selectedVideo !== project.videoId">
+            Afficher la vidéo
+          </button>
+
+          <div *ngIf="selectedVideo === project.videoId">
+            <button (click)="closeVideo()">Fermer la vidéo</button>
+            <iframe
+              width="560"
+              height="315"
+              [src]="sanitizeUrl(project.videoId)"
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</section>
