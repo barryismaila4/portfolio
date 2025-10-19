@@ -1,0 +1,15 @@
+/* about.component.css */
+.about {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .connect {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .connect a {
+    margin: 10px;
+  }
+  
